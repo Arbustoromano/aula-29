@@ -15,25 +15,28 @@ def cadastrar_pessoa(cadastros):
 
 def ver_cadastros (cadastros):
     if not cadastros:
-        print("Nenhum cadastro no sistema. ")
+        print("\n Nenhum cadastro no sistema.")
     else:
         print("\n ------ LISTA DE CADASTROS ------")   
 
         for i, pessoa in enumerate (cadastros, 1):
-            print(f"{i}. Nome: {pessoa ['nome']}", Idade:
-{pessoa ['Idade']}, Turma: {pessoa ['Turma']}, Curso: {pessoa}']}")'
+            
+            print(f"{i}. Nome: {pessoa['nome']}, Idade:{pessoa['Idade']}, Turma: {pessoa ['Turma']}, Curso: {pessoa['curso']}")
                 
 def main():
-    cadastro = []
+    cadastros = []
     while True:
         exibir_menu()
-        opção = input("ecolha uma opção: ")
-        if opção == "1":
-            cadastrar_pessoa (cadastros)
-        elif opção == "2":
-            ver_cadastros (cadastros)
-        elif opção == "3":
+        opcao = input("ecolha uma opção: ")
+        if opcao == "1":
+            cadastrar_pessoa(cadastros)
+        elif opcao == "2":
+            ver_cadastros(cadastros)
+        elif opcao == "3":
             print("obrigado por utilizar nosso sistema")
             break
-            
-        
+        else:
+            print("opção inválida! tente novamente")
+
+if __name__ == "_main_":
+    main()
